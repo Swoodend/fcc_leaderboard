@@ -33,8 +33,10 @@ class App extends Component {
       <div className="App">
         <NavBar reportState={this.getNavState} />
         <div className="table-container">
-          <img src={imgUrl} />
-          <UserTable selectedAllTime={this.state.displayAllTime}/>
+          <img className="fcc-logo" src={imgUrl} />
+          <div className="scroll-container">
+            <UserTable selectedAllTime={this.state.displayAllTime}/>
+          </div>
         </div>
       </div>
     );
