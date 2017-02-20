@@ -55,12 +55,12 @@ class UserTable extends Component{
   render(){
     //this.props.selectedAllTime
     let data = this.props.selectedAllTime ? this.state.sortedByAllTime : this.state.sortedByRecent
-    console.log('data is', data);
     let tableData = data.map((user, i) =>{
       return (
-        <tr>
+        <tr className="pink">
           <td>{i+1}</td>
           <td>{user.username}</td>
+          <td className="userpic"><img src={user.img}/></td>
           <td>{user.alltime}</td>
           <td>{user.recent}</td>
         </tr>
@@ -73,7 +73,8 @@ class UserTable extends Component{
             <tr>
               <th>#</th>
               <th>Username</th>
-              <th>AllTime</th>
+              <th>Avatar</th>
+              <th>All Time</th>
               <th>Recent</th>
             </tr>
           </thead>
