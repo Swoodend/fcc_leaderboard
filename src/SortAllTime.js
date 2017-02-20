@@ -18,9 +18,9 @@ class SortAllTime extends Component {
     };
 
     if (this.props.active){
-      return <div onClick={this.handleClick} style={activeStyle} className="nav-item">Sort by All Time</div>
+      return <div onClick={this.handleClick} style={activeStyle} className="nav-item">Sort all time</div>
     } else {
-      return <div onClick={this.handleClick}className="nav-item">Sort by All Time</div>
+      return <div onClick={this.handleClick}className="nav-item">Sort all time</div>
     }
   }
 }

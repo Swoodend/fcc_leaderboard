@@ -20,11 +20,11 @@ class SortRecent extends Component {
     if (this.props.active){
       return (
         <div onClick={this.handleClick} style={activeStyle} className="nav-item">
-          Sort by Recent
+          Sort recent
         </div>
       );
     } else {
-      return <div onClick={this.handleClick} className="nav-item">Sort by Recent</div>;
+      return <div onClick={this.handleClick} className="nav-item">Sort recent</div>;
     }
   }
 }
