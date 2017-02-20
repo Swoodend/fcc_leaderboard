@@ -18,6 +18,8 @@ class NavBar extends Component {
     this.setState({
       sortingAllTime: false,
       sortingRecent: true
+    }, () =>{
+      this.props.reportState(this.state.sortingRecent, this.state.sortingAllTime);
     });
   }
 
@@ -25,6 +27,8 @@ class NavBar extends Component {
     this.setState({
       sortingAllTime: true,
       sortingRecent: false
+    }, () => {
+      this.props.reportState(this.state.sortingRecent, this.state.sortingAllTime);
     });
   }
 
