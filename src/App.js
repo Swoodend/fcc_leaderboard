@@ -32,8 +32,10 @@ class App extends Component {
     return (
       <div className="App">
         <NavBar reportState={this.getNavState} />
-        <div className="table-container">
+        <div className="img-container">
           <img className="fcc-logo" src={imgUrl} />
+        </div>
+        <div className="table-container">
           <div className="scroll-container">
             <UserTable selectedAllTime={this.state.displayAllTime}/>
           </div>
