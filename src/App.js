@@ -8,22 +8,33 @@ const imgUrl = `
   ,e_colorize:100/v1487532006/fcclogo_ebcdeh.png
 `;
 
+
 class App extends Component {
   constructor(props){
     super(props);
-    this.state = {
+    this.getNavState = this.getNavState.bind(this);
+    this.state ={
       sortedByRecent: [],
-      sortedByAllTime: []
-    };
+      sortedByAllTime: [],
+      displayRecent: false,
+      displayAllTime: true
+    }
   }
-  
+
+  getNavState(displayRecent, displayAllTime){
+    this.setState({
+      displayRecent,
+      displayAllTime
+    });
+  }
+
   render() {
     return (
       <div className="App">
-        <NavBar />
+        <NavBar reportState={this.getNavState} />
         <div className="table-container">
           <img src={imgUrl} />
-          <UserTable />
+          <UserTable selectedAllTime={this.state.displayAllTime}/>
         </div>
       </div>
     );
