@@ -35,8 +35,8 @@ class NavBar extends Component {
   render(){
     return (
       <div className="nav">
-        <a href="https://www.freecodecamp.com">
-          <div className="nav-item">FreeCodeCamp</div>
+        <a className="nav-item" href="https://www.freecodecamp.com">
+          <div>FreeCodeCamp</div>
         </a>
         <SortRecent
           sortRecentClicked={this.sortRecentClicked}
